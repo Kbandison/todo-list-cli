@@ -13,7 +13,7 @@ function constOption() {
 function displayList() {
 
   if(list.length === 0) {
-    console.log('List is currently empty!');
+    console.log('list is currently empty!');
   } else {
     console.log(`\nYou have ${list.length} task(s).`)
   }
@@ -44,7 +44,7 @@ let list = [];
 let statusArray = [];
 
 
-while (option !== 'C') {
+while (option !== 'Y') {
   if (option == 'A') {
     console.log('___________________________________________\n');
     console.log('$$ Create Task selected $$');
@@ -75,12 +75,38 @@ while (option !== 'C') {
           }
           statusArray[newStatus - 1] = true;
     } else {
-      console.log('List is Empty. Try Adding a Task!'); 
+      console.log('Try Adding a Task, because your'); 
     }
    
     displayList();
     console.log('___________________________________________\n');
     constOption();
+  }
+
+  else if (option === 'C'){
+    console.log('___________________________________________\n');
+
+    console.log('$$ Exiting the To-Do List! $$');
+    console.log('Are You Sure You Want To Exit The List?\n Enter E or N.');
+
+    option = String((prompt('> ').toUpperCase()));
+
+    if(option == 'Y'){
+      console.log('___________________________________________\n');
+      console.log('See You Next Time!');
+      console.log('___________________________________________\n');
+    } else if(option == 'N'){
+      console.log('___________________________________________\n');
+      console.log("You've Chosen not to Leave!");
+      console.log('___________________________________________\n');
+      constOption();
+    } else {
+      console.log('Please Enter Y or N.\n');
+      console.log('$$ Exiting the To-Do List! $$');
+      console.log('Are You Sure You Want To Exit The List?');
+  
+      option = String((prompt('> ').toUpperCase()));
+    }
   }
 
   else {
@@ -90,10 +116,3 @@ while (option !== 'C') {
     constOption();
   }
 }
-
-console.log('___________________________________________\n');
-console.log('See You Next Time!');
-console.log('___________________________________________\n');
-
-
-
