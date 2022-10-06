@@ -79,6 +79,7 @@ while (option !== 'Y') {
     }
   }
 
+  ////////// Code for Option B: View Tasks //////////
   else if (option === 'B') {
     console.log('___________________________________________\n');
     console.log('List of tasks: ');
@@ -87,7 +88,7 @@ while (option !== 'Y') {
     constOption();
   }
 
-  ////////// Code for Option B: Marking a Task Complete //////////
+  ////////// Code for Option C: Marking a Task Complete //////////
   else if (option === 'C') {
     if (list.length != 0) { //---------------------------------------------------------//Code will run as intended if the array is not empty
       console.log('___________________________________________\n');
@@ -128,7 +129,7 @@ while (option !== 'Y') {
     }
   }
 
-  ////////// Code for Option C: Remarking Task as Incomplete //////////
+  ////////// Code for Option D: Remarking Task as Incomplete //////////
   else if (option === 'D') {
     if (list.length != 0) {
       console.log('___________________________________________\n');
@@ -169,7 +170,7 @@ while (option !== 'Y') {
     }
   }
 
-  ////////// Code for Option D: Deleting a Task //////////
+  ////////// Code for Option E: Deleting a Task //////////
   else if (option === 'E') {
     if (list.length >= 1) { //---------------------------------------------------------//If there are items in the list, code will run as intended
       console.log('___________________________________________\n');
@@ -205,7 +206,7 @@ while (option !== 'Y') {
     }
   }
 
-  ////////// Code for Option D: Exit Code //////////
+  ////////// Code for Option F: Exit Code //////////
   else if (option === 'F') {
     console.log('___________________________________________\n');
 
